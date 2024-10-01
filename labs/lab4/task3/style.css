@@ -1,0 +1,27 @@
+a {
+    color: green;
+}
+
+ul li ul{
+    list-style-type: none;
+}
+
+.nested-list-list {
+    color: purple;
+}
+
+.square-bullet {
+    list-style-type: square;
+}
+
+.marked-bullet {
+    list-style-image: url("../materials/li.svg");
+}
+
+.square-bullet li a {
+    text-decoration: none;
+}
+
+ol {
+    list-style-position: inside;
+}
