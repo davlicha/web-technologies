@@ -7,3 +7,8 @@
 [Lab2.3](labs/lab2/task3/index.html)
 
 [Lab3](/labs/lab3/index.html)
+
+[Lab4.1](labs/lab4/task1/index.html)
+[Lab4.2](labs/lab4/task2/index.html)
+[Lab4.3](labs/lab4/task3/index.html)
+[Lab4.4](labs/lab4/task4/index.html)
