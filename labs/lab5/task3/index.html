@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximumscale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>task3</title>
+</head>
+<body>
+
+<main>
+    <div class="wrapper">
+        <form action="" method="post" enctype="multipart/form-data">
+            <fieldset class="main-info">
+                <legend>Розкажіть про себе</legend>
+                <div class="reg-box">
+                    <p>
+                        <label>
+                            Ім'я:
+                            <input type="text" name="name" value="Клименко Василь" placeholder="Введіть ім'я" required
+                                   tabindex="1">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Коротко про себе:
+                            <textarea name="bio" placeholder="Розкажіть коротко про себе" tabindex="4"></textarea>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Пароль:
+                            <input name="password" value="123456Ss" type="password" placeholder="Придумайте пароль"
+                                   required
+                                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" tabindex="2">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Email:
+                            <input name="email" value="klymenko.v@gmail.com" type="email" autocomplete="off"
+                                   placeholder="Введіть вашу пошту" required
+                                   pattern="[^@\s]+@[^@\s]+\.[^@\s]+" tabindex="3">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Номер телефону:
+                            <input name="tel" value="+380666666666" type="tel" autocomplete="off"
+                                   placeholder="Введіть ваш тел. номер" required
+                                   pattern="\+[0-9]{12}" tabindex="5">
+                        </label>
+                    </p>
+                    <p>
+                        <label for="birthdate">
+                            Дата народження:
+
+                        </label>
+                        <input id="birthdate" name="date" value="11.12.2024" type="date"
+                               placeholder="Виберіть вашу дату народження"
+                               required tabindex="6">
+                    </p>
+                </div>
+                <div class="reg-checks">
+                    <p>
+                        Освіта:
+                        <br>
+                        <input id="education-middle" name="education-middle" value="0" type="radio" checked placeholder="Середня" tabindex="9">
+                        <label for="education-middle"></label>Повна середня
+                        <br/>
+                        <input id="education-high" name="education-high" value="0" type="radio" placeholder="Вища" tabindex="8">
+                        <label for="education-high">Вища</label>
+                        <br/>
+                        <input id="education-double-high" name="education-double-high" value="0" type="radio" placeholder="Вища 2х" tabindex="7">
+                        <label for="education-double-high">Дві вищих</label>
+                    </p>
+                    <p>
+                        Стать:
+                        <br/>
+                        <input id="sex-1" name="sex" value="0" type="checkbox" placeholder="Чоловіча" tabindex="10">
+                        <label for="sex-1">Чол.</label>
+                        <br/>
+                        <input id="sex-2" name="sex" value="0" type="checkbox" placeholder="Жіноча" tabindex="11">
+                        <label for="sex-2">Жін.</label>
+                        <br/>
+                        <input id="sex-3" name="sex" value="1" type="checkbox" placeholder="Не вказувати" checked tabindex="12">
+                        <label for="sex-3">Не вказувати</label>
+                    </p>
+                </div>
+            </fieldset>
+
+            <fieldset class="secondary-info">
+                <legend>Невеличке опитування</legend>
+                <p>
+                    <label>
+                        Ви любите собак:
+                        <select name="dogs">
+                            <option name="dogs-yes" value="Yes">Yes</option>
+                            <option name="dogs-no" value="No">No</option>
+                            <option name="dogs-maybe" value="Maybe" selected>Maybe</option>
+                            <option name="dogs-probably-yes" value="Probably, yes">Probably, yes</option>
+                            <option name="dogs-probably-no" value="Probably, no">Probably, no</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Чай краще за каву:
+                        <select name="tea" multiple>
+                            <option name="tea-yes" value="Yes">Yes</option>
+                            <option name="tea-no" value="No">No</option>
+                            <option name="tea-maybe" value="Maybe" selected>Maybe</option>
+                            <option name="tea-probably-yes" value="Probably, yes">Probably, yes</option>
+                            <option name="tea-probably-no" value="Probably, no">Probably, no</option>
+                            <option name="tea-probably-maybe" value="Probably, maybe">Probably, maybe</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Фрукти:
+                        <select name="fruits">
+                            <optgroup label="Яблука">
+                                <option name="apple-smoothie" value=apple-smoothie"">Смузі</option>
+                                <option name="apple-juice" value=apple-juice"">Сік</option>
+                                <option name="apple-yogurt" value="apple-yogurt">Йогурт</option>
+                                <option name="apple" value="apple">Цілим</option>
+                            </optgroup>
+                            <optgroup label="Апельсини">
+                                <option name="orange-smoothie" value="orange-smoothie">Смузі</option>
+                                <option name="orange-juice" value="orange-juice">Сік</option>
+                                <option name="orange-yogurt" value="orange-yogurt">Йогурт</option>
+                                <option name="orange" value="orange">Цілим</option>
+                            </optgroup>
+                            <optgroup label="Банани">
+                                <option name="banana-smoothie" value="banana-smoothie">Смузі</option>
+                                <option name="banana-juice" value="banana-juice">Сік</option>
+                                <option name="banana-yogurt" value=banana-yogurt"">Йогурт</option>
+                                <option name="banana" value="banana">Цілим</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Морозиво:
+                        <input name="Шоколадне" value="ice-cream" list="data-list" placeholder="Оберіть варіант"/>
+                        <datalist id="data-list">
+                            <option name="chocolate" value="Шоколадне"></option>
+                            <option name="coconut" value="Кокосове"></option>
+                            <option name="mint" value="М'ятне"></option>
+                            <option name="strawberry" value="Полуничне"></option>
+                            <option name="vanilla" value="Ванільне"></option>
+                        </datalist>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Улюблена пісня:
+                        <input name="fav-song" value="fav-song" type="file" accept="audio/*" multiple
+                               placeholder="Виберіть аудіо">
+                    </label>
+                </p>
+            </fieldset>
+            <div class="form-button">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>

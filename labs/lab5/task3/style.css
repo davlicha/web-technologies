@@ -1,0 +1,96 @@
+html, body {margin:0}
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.wrapper {
+    background-image: url("../img/forest.png");
+    padding: 80px;
+}
+form {
+    margin: 0 auto;
+    width: 25%;
+}
+legend {
+    font-weight: 900;
+    font-size: 24px;
+    color: #ff6400;
+    margin: 0 auto;
+    text-shadow: #799967 0 1px 1px;
+}
+.main-info {
+    background-color: #BFD8AF;
+    border-radius: 10px;
+    border: solid 3px #75A47F;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px;
+    padding: 0;
+}
+.reg-box {
+    text-align: center;
+}
+.reg-checks > p > input {
+    width: 15px;
+    margin-left: 25px;
+}
+.reg-checks {
+    margin: 25px 30px;
+}
+
+input {
+    padding: 10px;
+    margin: 0;
+    width: 85%;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+}
+textarea {
+    width: 300px;
+    height: 150px;
+    resize: none;
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.secondary-info {
+    text-align: center;
+    background-color: #BFD8AF;
+    border-radius: 10px;
+    border: solid 3px #75A47F;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding: 0;
+}
+select {
+    padding: 10px;
+    margin: 0;
+    width: 85%;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+}
+input, select, textarea {
+    margin-top: 5px;
+}
+.form-button {
+    text-align: center;
+}
+.form-button button {
+    padding: 10px;
+    margin: 0;
+    width: 45%;
+    border-radius: 10px;
+    border: solid 3px #75A47F;
+    outline: none;
+    text-align: center;
+    background-color: #C6EBC5;
+}
+.form-button button:hover {
+    cursor: pointer;
+    background-color: #A1C398;
+}
