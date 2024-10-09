@@ -8,29 +8,33 @@ td,th{
 table{
     border-collapse: separate;
     table-layout: fixed;
-    width: 50%;
+    width: 800px;
 }
 thead > tr{
+    color: white;
     background: linear-gradient(to right,
-    rgb(228, 242, 219) 20%,
-    rgb(189, 229, 183) 20%, rgb(189, 229, 183) 40%,
-    rgb(168, 217, 148) 40%, rgb(168, 217, 148) 60%,
-    rgb(73, 148, 52) 60%, rgb(73, 148, 52) 80%,
-    rgb(47, 99, 35) 80%, rgb(47, 99, 35) 100%);
+    rgb(205,178,233) 20%,
+    rgb(163,137,190) 20%, rgb(163,137,190) 40%,
+    rgb(123,99,149) 40%, rgb(123,99,149) 60%,
+    rgb(84,62,109) 60%, rgb(84,62,109) 80%,
+    rgb(48,29,72) 80%, rgb(48,29,72) 100%);
 }
 
 tbody > tr > th{
+    color: white;
     background: linear-gradient(to right,
-    rgb(106, 192, 77),
-    rgb(106, 192, 77)
+    rgb(143,118,169),
+    rgb(143,118,169)
     );
 }
 tbody {
     background: repeating-linear-gradient(
             to bottom,
-            rgb(196, 229, 183) 20%,
-            rgb(196, 229, 183) 40%,
-            rgb(69, 159, 17) 40%,
-            rgb(69, 159, 17) 60%
+            rgb(230,204,255) 20%,
+            rgb(184,157,211) 20%, rgb(184,157,211) 40%,
+            rgb(230,204,255) 40%, rgb(230,204,255) 60%,
+            rgb(184,157,211) 60%, rgb(184,157,211) 80%,
+            rgb(230,204,255) 80%, rgb(230,204,255) 100%
+
     );
 }

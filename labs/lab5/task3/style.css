@@ -13,14 +13,14 @@ form {
 legend {
     font-weight: 900;
     font-size: 24px;
-    color: #ff6400;
+    color: #955dbd;
     margin: 0 auto;
     text-shadow: #799967 0 1px 1px;
 }
 .main-info {
-    background-color: #BFD8AF;
+    background-color: #8de1d1;
     border-radius: 10px;
-    border: solid 3px #75A47F;
+    border: solid 3px #008471;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 20px;
     padding: 0;
@@ -57,9 +57,9 @@ textarea {
 
 .secondary-info {
     text-align: center;
-    background-color: #BFD8AF;
+    background-color: #8de1d1;
     border-radius: 10px;
-    border: solid 3px #75A47F;
+    border: solid 3px #008471;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 20px;
     margin-top: 50px;
@@ -85,12 +85,12 @@ input, select, textarea {
     margin: 0;
     width: 45%;
     border-radius: 10px;
-    border: solid 3px #75A47F;
+    border: solid 3px #008471;
     outline: none;
     text-align: center;
-    background-color: #C6EBC5;
+    background-color: #8de1d1;
 }
 .form-button button:hover {
     cursor: pointer;
-    background-color: #A1C398;
+    background-color: #8de1d1;
 }
