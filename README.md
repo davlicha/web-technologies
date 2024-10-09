@@ -12,3 +12,7 @@
 [Lab4.2](labs/lab4/task2/index.html)
 [Lab4.3](labs/lab4/task3/index.html)
 [Lab4.4](labs/lab4/task4/index.html)
+
+[Lab5.1](labs/lab5/task1/index.html)
+[Lab5.2](labs/lab5/task2/index.html)
+[Lab5.3](labs/lab5/task3/index.html)
