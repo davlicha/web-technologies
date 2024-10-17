@@ -1,6 +1,6 @@
 # web-technologies
 
-Мені було дуже цікаво, хоча це зайняло в мене дуже багато часу та все ж я радий вивчите цось нове особливо про Git, оскільки він допоможе мені у подальшому житті своїм зручним функціоналом.
+Демонстрація лабораторних робіт.
 
 [Lab2.1](labs/lab2/task1/index.html)
 [Lab2.2](labs/lab2/task2/index.html)
@@ -16,3 +16,5 @@
 [Lab5.1](labs/lab5/task1/index.html)
 [Lab5.2](labs/lab5/task2/index.html)
 [Lab5.3](labs/lab5/task3/index.html)
+
+[Lab6](labs/lab6/index.html)
