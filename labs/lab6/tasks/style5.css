@@ -1,4 +1,7 @@
-html, body { margin: 0; padding: 0; height: 100%; }
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -112,7 +115,6 @@ div {
             linear-gradient(to right top, green 25%, transparent 25%, transparent 100%),
             linear-gradient(to right bottom, orange 20%, transparent 45%, transparent 100%),
             linear-gradient(to left bottom, blue 5%, transparent 30%, transparent 100%);
-            ;
 }
 .gradient-type-5 {
     background: repeating-linear-gradient(

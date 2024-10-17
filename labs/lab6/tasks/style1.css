@@ -1,4 +1,7 @@
-html, body { margin: 0; padding: 0; height: 100%; }
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -63,6 +66,7 @@ div {
     column-gap: 35px;
     column-width: 150px;
     column-rule: 5px dotted red;
+    text-align: justify;
 }
 .p-img{
     width: 200px;

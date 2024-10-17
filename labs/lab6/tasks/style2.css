@@ -1,7 +1,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    /*height: 100%;*/
 }
 
 * {
@@ -112,7 +111,7 @@ div {
     border-image: url("../img/task2/border.png") 18 18 18 18;
 }
 .border-type-8 {
-    border: double #ffbd67 15px;
+    border: 15px double #ffbd67;
     border-image: url("../img/task2/border.png") 15 / 15px round;
 }
 .border-type-9 {

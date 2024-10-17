@@ -1,4 +1,7 @@
-html, body { margin: 0; padding: 0; height: 100%; }
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -79,6 +82,7 @@ div {
     padding: 20px 60px;
     background-color: #ffab37;
     border-radius: 5rem;
+    text-align: center;
 }
 .inner-content-block{
     width: 350px;
@@ -90,5 +94,9 @@ div {
 }
 .inner-content-block:last-child {
     margin-left: 95px
+}
+
+#first-content-block {
+    background-color: #aa6305;
 }
 
