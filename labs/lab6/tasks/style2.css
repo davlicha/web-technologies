@@ -26,7 +26,7 @@ header {
     margin: 10px;
     display: inline-block;
     padding: 15px;
-    background-color: #ffab37;
+    box-shadow: inset 0 0 10px 6px #ffab37;
     border-radius: 50%;
 }
 .logo > img {

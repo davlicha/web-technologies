@@ -27,7 +27,7 @@ header {
     margin: 10px;
     display: inline-block;
     padding: 15px;
-    background-color: #ffab37;
+    box-shadow: inset 0 0 10px 6px #ffab37;
     border-radius: 50%;
 }
 .logo > img {
@@ -72,7 +72,6 @@ div {
 .div-box {
     display: inline-block;
     vertical-align: top;
-    border: 1px solid #ae6d14;
     width: 250px;
     height: 400px;
     margin: 27px;
