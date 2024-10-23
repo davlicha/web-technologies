@@ -66,4 +66,40 @@ header {
     display: inline-block;
     background-color: #9696d9;
     padding: 10px;
+    border: #000000 2px solid;
+}
+
+.block1 {
+    top: 200px;
+    width: 15%;
+    background-color: #0d7c04;
+}
+
+.block2 {
+    left: 250px;
+    height:  250px;
+    visibility: hidden;
+}
+
+.block3 {
+    top: 200px;
+    left: 270px;
+    width: 15%;
+    background-color: #0d7c04;
+
+}
+
+.block4 {
+    width: 15%;
+    visibility: hidden;
+}
+
+.block3:hover ~ .block4{
+    background-color: #047c7c;
+    visibility: visible;
+}
+
+.block1:hover ~ .block2{
+    background-color: #047c7c;
+    visibility: visible;
 }
