@@ -18,3 +18,8 @@
 [Lab5.3](labs/lab5/task3/index.html)
 
 [Lab6](labs/lab6/index.html)
+
+[Lab7](labs/lab7/index.html)
+
+[Lab8.1](labs/lab8/task1.html)
+[Lab8.2](labs/lab8/task2.html)
