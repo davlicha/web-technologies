@@ -29,7 +29,7 @@ function task2() {
 
     let max = colors[0];
     let min = colors[0];
-    for (i = 0; i < colors.length; i++) {
+    for (let i = 0; i < colors.length; i++) {
         if (colors[i].length < min.length) {
             min = colors[i]
         }
@@ -40,7 +40,7 @@ function task2() {
     console.log(`Longest: ${max}\tShortest: ${min}`);
 
     console.log("Looking for blue colors...");
-    for (i = colors.length-1; i >= 0; i--) {
+    for (let i = colors.length-1; i >= 0; i--) {
         if (!(colors[i].includes("blue"))) {
             colors.splice(i, 1);
         }
@@ -71,7 +71,7 @@ function task3() {
     console.log(empl);
 
     console.log("Looking for developers...");
-    let devs = empl.filter((a) => a.position=="Developer");
+    let devs = empl.filter((a) => a.position==="Developer");
     console.log(devs);
 
     console.log("Delete where (age > 30)...");
@@ -97,7 +97,7 @@ function task4() {
     console.log(students);
 
     console.log("Deleting Alex...");
-    students = students.filter((a) => a.name!="Alex");
+    students = students.filter((a) => a.name!=="Alex");
     console.log(students);
 
     console.log("Adding new bro...");
@@ -109,7 +109,7 @@ function task4() {
     console.log(students);
 
     console.log("Looking for 3rd year students...");
-    let thirdYear = students.filter((a) => a.year==3);
+    let thirdYear = students.filter((a) => a.year===3);
     console.log(thirdYear);
 }
 
@@ -125,7 +125,7 @@ function task5() {
     console.log(squares);
 
     console.log("Looking for even numbers...");
-    let evens = nums.filter((a) => a%2==0);
+    let evens = nums.filter((a) => a%2===0);
     console.log(evens);
 
     console.log("Calculating sum...");
@@ -156,10 +156,10 @@ function libraryManagment(){
         books.push(newBook);
     }
     function removeBook(title) {
-        books = books.filter((a) => a.title!=title)
+        books = books.filter((a) => a.title!==title)
     }
     function findBooksByAuthor(author) {
-        return books.find((a) => a.author==author)
+        return books.find((a) => a.author===author)
     }
     function toggleBookAvailability(title) {
         books.forEach((a) => {
