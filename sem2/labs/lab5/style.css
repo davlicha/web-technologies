@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Лампа */
+.input-start {
+    max-width: 50px;
+}
+
+.lamp-container {
+    margin: 20px auto;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lamp1-off { background-color: #666; }
+.lamp1-on { background-color: #ffcc00; }
+.lamp1-full { background-color: #ffff00; }
+
+.lamp2-off { background-color: #555; }
+.lamp2-on { background-color: #33ccff; }
+
+.lamp3-off { background-color: #444; }
+.lamp3-on { background-color: #ff3366; }
+
+/* Світлофор */
+#traffic-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: black;
+    border-radius: 10px;
+    position: relative;
+}
+
+.light {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: #444;
+}
+
+#red.active { background-color: red; }
+#yellow.active { background-color: yellow; }
+#green.active { background-color: green; }
+
+/* Годинник */
+#clock {
+    font-size: 2em;
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blink {
+    animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+    50% { opacity: 0; }
+}
+
+/* Форма для товарів */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/*.actionLine {*/
+/*    display: flex;*/
+/*}*/
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 250px;
+}

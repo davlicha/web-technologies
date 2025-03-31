@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лампа, Світлофор, Таймер, Продукти</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="lamp-section">
+  <h2>Управління лампою</h2>
+  <label><input type="radio" name="lamp-type" id="regular-lamp" class="input-start" checked> Звичайна лампа</label>
+  <label><input type="radio" name="lamp-type" id="cool-lamp" class="input-start"> Прохолодна лампа</label>
+  <label><input type="radio" name="lamp-type" id="omg-lamp" class="input-start"> OMG лампа</label>
+  <input type="checkbox" id="lamp-power" class="input-start"> Увімкнути лампу
+  <div id="lamp-picture" class="lamp1-off"></div>
+  <p id="lamp-hint"></p>
+</section>
+
+<section id="traffic-light-section">
+  <h2>Світлофор</h2>
+  <div id="traffic-light">
+    <div id="red" class="light"></div>
+    <div id="yellow" class="light"></div>
+    <div id="green" class="light"></div>
+  </div>
+  <p id="status">Червоний</p>
+  <button id="startBtn">Запустити</button>
+  <button id="nextBtn">Наступний</button>
+  <button id="setTimesBtn">Задати час</button>
+</section>
+
+<section id="timer-section">
+  <h2>Таймер</h2>
+  <p id="clock"></p>
+  <input type="datetime-local" id="timerInput">
+  <button id="startTimerBtn">Запустити таймер</button>
+  <p id="countdown"></p>
+</section>
+
+<section id="birthday-section">
+  <h2>Зворотній відлік до дня народження</h2>
+  <input type="date" id="birthdayInput">
+  <button id="countdownBirthdayBtn">Розрахувати</button>
+  <p id="birthdayCountdown"></p>
+</section>
+
+<section id="store-section">
+  <h2>Керування товарами</h2>
+  <div>
+    <div class="actionLine">
+      <input type="text" id="productName" placeholder="Назва товару">
+      <input type="number" id="productPrice" placeholder="Ціна">
+      <input type="number" id="productStock" placeholder="Кількість">
+      <button onclick="addProduct()">Додати товар</button>
+    </div>
+    <div class="actionLine">
+      <input type="text" id="searchName" placeholder="Пошук товару">
+      <button onclick="searchProduct()">Знайти</button>
+    </div>
+    <div class="actionLine">
+      <input type="text" id="updateName" placeholder="Оновити товар">
+      <input type="number" id="updatePrice" placeholder="Нова ціна">
+      <input type="number" id="updateStock" placeholder="Нова кількість">
+      <button onclick="updateProduct()">Оновити</button>
+    </div>
+    <div class="actionLine">
+      <input type="text" id="deleteName" placeholder="Видалити товар">
+      <button onclick="deleteProduct()">Видалити</button>
+    </div>
+    <div class="actionLine">
+      <input type="text" id="orderName" placeholder="Замовлення товару">
+      <input type="number" id="orderQuantity" placeholder="Кількість">
+      <button onclick="makeOrder()">Замовити</button>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
