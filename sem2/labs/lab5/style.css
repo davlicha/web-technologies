@@ -178,10 +178,6 @@ input:checked + .slider:before {
     margin: 20px;
 }
 
-/*.actionLine {*/
-/*    display: flex;*/
-/*}*/
-
 .input-group {
     display: flex;
     flex-direction: column;

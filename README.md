@@ -9,3 +9,5 @@
 **[Lab3](sem2/labs/lab3/index.html)**
 
 **[Lab4](sem2/labs/lab4/index.html)**
+
+**[Lab5](sem2/labs/lab5/index.html)**
