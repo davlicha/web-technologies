@@ -30,27 +30,34 @@ button:hover {
     max-width: 50px;
 }
 
-.lamp-container {
+#lamp-section {
     margin: 20px auto;
-    width: 200px;
-    height: 300px;
+    padding: 10px;
+    width: 800px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    flex-direction: column;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.lamp1-off { background-color: #666; }
-.lamp1-on { background-color: #ffcc00; }
-.lamp1-full { background-color: #ffff00; }
+#lamp-picture {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+}
 
-.lamp2-off { background-color: #555; }
-.lamp2-on { background-color: #33ccff; }
+.lamp1-off { background-image: url("img/1off.png"); }
+.lamp1-on { background-image: url("img/1regular.jpg"); }
+.lamp1-full { background-image: url("img/1full.jpg"); }
 
-.lamp3-off { background-color: #444; }
-.lamp3-on { background-color: #ff3366; }
+.lamp2-off { background-image: url("img/2off.png"); }
+.lamp2-on { background-image: url("img/2on.png"); }
+
+.lamp3-off { background-image: url("img/3off.png"); }
+.lamp3-on { background-image: url("img/3on.png"); }
 
 /* Світлофор */
 #traffic-light {
