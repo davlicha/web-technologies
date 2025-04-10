@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Управління товарами</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Список товарів</h1>
+  <div class="total-price">Загальна вартість: <span id="total-price">0</span> грн</div>
+</header>
+
+<div class="filters" data-title="Фільтри">
+  <button class="filter-btn" data-category="all">Всі товари</button>
+  <button class="filter-btn" data-category="electronics">Електроніка</button>
+  <button class="filter-btn" data-category="clothing">Одяг</button>
+  <button class="filter-btn" data-category="books">Книги</button>
+  <button class="filter-btn" data-category="home">Дім</button>
+</div>
+
+<div class="sorting" data-title="Сортування">
+  <button class="sort-btn" data-sort="price">Сортувати за ціною</button>
+  <button class="sort-btn" data-sort="date-created">Сортувати за датою створення</button>
+  <button class="sort-btn" data-sort="date-updated">Сортувати за датою оновлення</button>
+  <button class="reset-sort-btn">Скинути сортування</button>
+</div>
+
+<div class="products-list" id="products-list">
+  <p class="empty-message">Наразі список товарів пустий. Додайте новий товар.</p>
+</div>
+
+<button class="add-product-btn" id="add-product-btn">Додати новий товар</button>
+
+<div class="modal" id="product-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="modal-title">Додати новий товар</h2>
+      <button class="close-btn" id="close-modal">&times;</button>
+    </div>
+    <form id="product-form">
+      <input type="hidden" id="product-id">
+      <div class="form-group">
+        <label for="product-name">Назва товару:</label>
+        <input type="text" id="product-name" required>
+      </div>
+      <div class="form-group">
+        <label for="product-price">Ціна (грн):</label>
+        <input type="number" id="product-price" min="0" step="0.01" required>
+      </div>
+      <div class="form-group">
+        <label for="product-category">Категорія:</label>
+        <select id="product-category" required>
+          <option value="">Виберіть категорію</option>
+          <option value="electronics">Електроніка</option>
+          <option value="clothing">Одяг</option>
+          <option value="books">Книги</option>
+          <option value="home">Дім</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="product-image">URL зображення:</label>
+        <input type="url" id="product-image" required>
+      </div>
+      <div class="form-actions">
+        <button type="button" class="cancel-btn" id="cancel-form">Скасувати</button>
+        <button type="submit" class="submit-btn">Зберегти</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="snackbar" id="snackbar"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
