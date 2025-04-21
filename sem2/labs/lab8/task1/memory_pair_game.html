@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Pair Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Memory Pair Game</h1>
+
+<!--     Game Settings Section -->
+    <section class="game-settings" id="settings-panel">
+        <div class="settings-form">
+            <div class="settings-group">
+                <label for="game-mode">Game Mode:</label>
+                <select id="game-mode">
+                    <option value="1">Solo</option>
+                    <option value="2">Duo</option>
+                </select>
+            </div>
+
+            <div class="settings-group">
+                <label for="player1-name">Player 1 Name:</label>
+                <input type="text" id="player1-name" placeholder="Player 1" value="Player 1">
+            </div>
+
+            <div class="settings-group" id="player2-container" style="display: none;">
+                <label for="player2-name">Player 2 Name:</label>
+                <input type="text" id="player2-name" placeholder="Player 2" value="Player 2">
+            </div>
+
+            <div class="settings-group">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy (3 min)</option>
+                    <option value="normal">Normal (2 min)</option>
+                    <option value="hard">Hard (1 min)</option>
+                </select>
+            </div>
+
+            <div class="settings-group">
+                <label for="board-size">Board Size:</label>
+                <select id="board-size">
+                    <option value="4x3">4x3 (12 cards)</option>
+                    <option value="4x4">4x4 (16 cards)</option>
+                    <option value="5x4">5x4 (20 cards)</option>
+                    <option value="6x4">6x4 (24 cards)</option>
+                </select>
+            </div>
+
+            <div class="settings-group">
+                <label for="rounds">Number of Rounds:</label>
+                <input type="number" id="rounds" min="1" max="10" value="1">
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="start-button" id="start-game">Start Game</button>
+            <button class="reset-button" id="reset-settings">Reset Settings</button>
+        </div>
+    </section>
+
+    <!-- Game Status Section -->
+    <section class="game-status" id="game-status" style="display: none;">
+        <div class="status-item">
+            <h3>Current Player</h3>
+            <div class="status-value" id="current-player">Player 1</div>
+        </div>
+        <div class="status-item">
+            <h3>Current Round</h3>
+            <div class="status-value" id="current-round">1</div>
+        </div>
+        <div class="status-item">
+            <h3>Timer</h3>
+            <div class="status-value" id="timer">03:00</div>
+        </div>
+        <div class="status-item">
+            <h3>Moves</h3>
+            <div class="status-value" id="moves">0</div>
+        </div>
+        <div class="status-item">
+            <h3>Pairs Found</h3>
+            <div class="status-value" id="pairs">0</div>
+        </div>
+    </section>
+
+    <!-- Memory Game Section -->
+    <section class="memory-game" id="memory-game"></section>
+
+    <!-- Game Controls -->
+    <div class="button-group" style="margin-top: 20px; display: none;" id="game-controls">
+        <button class="restart-button" id="restart-game">Restart Game</button>
+    </div>
+
+    <!-- Results Modal -->
+    <div class="modal" id="results-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Game Results</h2>
+            </div>
+            <div class="modal-body">
+                <div id="winner-display" class="winner"></div>
+                <table class="results-table">
+                    <thead>
+                    <tr>
+                        <th>Round</th>
+                        <th>Player</th>
+                        <th>Moves</th>
+                        <th>Time</th>
+                    </tr>
+                    </thead>
+                    <tbody id="results-table-body">
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="start-button" id="play-again">Play Again</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
