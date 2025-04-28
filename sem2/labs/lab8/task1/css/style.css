@@ -133,7 +133,7 @@ button:hover {
     max-width: 640px;
     aspect-ratio: 1;
     margin: 0 auto;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     perspective: 1000px;
     gap: 10px;
@@ -175,11 +175,9 @@ button:hover {
 
 .front-face {
     transform: rotateY(180deg);
-    background: #ffffff;
 }
 
 .back-face {
-    background: #1C7CCC;
     color: white;
     font-size: 24px;
     font-weight: bold;

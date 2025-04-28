@@ -91,6 +91,7 @@ function startGame() {
     state.moves = 0;
     state.pairsFound = 0;
 
+    elements.memoryGame.style.display = 'flex';
     elements.settingsPanel.style.display = 'none';
     elements.gameStatus.style.display = 'flex';
     elements.gameControls.style.display = 'flex';
@@ -234,7 +235,6 @@ function startTimer() {
         updateStatusDisplay();
 
         if (state.timeLeft <= 0) {
-            // Time's up
             endRound(false);
         }
     }, 1000);
@@ -340,6 +340,7 @@ function closeResultsAndReset() {
     elements.settingsPanel.style.display = 'block';
     elements.gameStatus.style.display = 'none';
     elements.gameControls.style.display = 'none';
+    elements.memoryGame.style.display = 'none';
     elements.memoryGame.innerHTML = '';
     state.gameStarted = false;
 }
