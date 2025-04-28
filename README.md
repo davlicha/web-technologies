@@ -15,3 +15,5 @@
 **[Lab6] [Task1](sem2/labs/lab6/index.html) [Task2](sem2/labs/lab6/page2.html)**
 
 **[Lab7](sem2/labs/lab7/game.html)**
+
+**[Lab8] [Task1](sem2/labs/lab8/task1/memory_pair_game.html) [Task2](sem2/labs/lab8/task2/slider.html) [Task3](sem2/labs/lab8/task3/board.html)**
