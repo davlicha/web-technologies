@@ -1,0 +1,338 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    border-bottom: solid  1px var(--text-50);
+    padding: 10px 100px;
+    color: var(--text-50);
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lab-number {
+    font-weight: bold;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    width: 50px;
+}
+
+.variant-text {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+body {
+    background-color: var(--background-950);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--background-900);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.46);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--text-50);
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-50);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    color: var(--accent-300);
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-300);
+    border-radius: 3px 3px 0 0;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form h2 {
+    margin-bottom: 10px;
+    color: var(--text-50);
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: var(--text-50);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 3px solid var(--background-800);
+    background-color: var(--background-50);
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--background-500);
+}
+
+.form-group input.valid {
+    border-color: #0dcd38;
+}
+
+.form-group input.invalid{
+    border-color: var(--warning-400);
+}
+
+.form-group input.invalid + .password-toggle {
+    color: var(--warning-400);
+}
+
+.error-message {
+    color: var(--warning-400);
+    font-size: 12px;
+    min-height: 18px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    cursor: pointer;
+    color: var(--text-600);
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.remember {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.remember input {
+    width: auto;
+}
+
+.submit-btn {
+    background-color: var(--accent-500);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-400);
+}
+
+.success-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-800);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.success-message.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.success-message i {
+    font-size: 60px;
+    color: #28a745;
+}
+
+.success-message p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #28a745;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .tab-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px 12px;
+    }
+
+    .submit-btn {
+        padding: 10px;
+    }
+}
+
+
+:root {
+    --text-50: #e7f4fd;
+    --text-100: #d0e9fb;
+    --text-200: #a1d3f7;
+    --text-300: #71bdf4;
+    --text-400: #42a7f0;
+    --text-500: #1392ec;
+    --text-600: #0f74bd;
+    --text-700: #0b578e;
+    --text-800: #083a5e;
+    --text-900: #041d2f;
+    --text-950: #020f18;
+
+    --background-50: #e8f4fc;
+    --background-100: #d1eafa;
+    --background-200: #a4d4f4;
+    --background-300: #76bfef;
+    --background-400: #48a9ea;
+    --background-500: #1b94e4;
+    --background-600: #1576b7;
+    --background-700: #105989;
+    --background-800: rgba(8, 36, 53, 0.8);
+    --background-900: #180337;
+    --background-950: #06001b;
+
+    --primary-50: #e9f4fc;
+    --primary-100: #d3e9f8;
+    --primary-200: #a7d3f1;
+    --primary-300: #7bbeea;
+    --primary-400: #4fa8e3;
+    --primary-500: #2292dd;
+    --primary-600: #1c75b0;
+    --primary-700: #155884;
+    --primary-800: #0e3a58;
+    --primary-900: #071d2c;
+    --primary-950: #030f16;
+
+    --secondary-50: #eaeafa;
+    --secondary-100: #d5d5f6;
+    --secondary-200: #ababed;
+    --secondary-300: #8282e3;
+    --secondary-400: #5858da;
+    --secondary-500: #2e2ed1;
+    --secondary-600: #2525a7;
+    --secondary-700: #1c1c7d;
+    --secondary-800: #121254;
+    --secondary-900: #09092a;
+    --secondary-950: #050515;
+
+    --accent-50: #fefbe7;
+    --accent-100: #fdf7ce;
+    --accent-200: #faee9e;
+    --accent-300: #f8e66d;
+    --accent-400: #f6dd3c;
+    --accent-500: #f4d50b;
+    --accent-600: #c3aa09;
+    --accent-700: #928007;
+    --accent-800: #615505;
+    --accent-900: #312b02;
+    --accent-950: #181501;
+
+    --warning-50: #fee7e7;
+    --warning-100: #fdcece;
+    --warning-200: #fa9e9e;
+    --warning-300: #f86d6d;
+    --warning-400: #f63c3c;
+    --warning-500: #f40b0b;
+    --warning-600: #c30909;
+    --warning-700: #920707;
+    --warning-800: #610505;
+    --warning-900: #310202;
+    --warning-950: #180101;
+}
