@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система Управління Бібліотекою</title>
+    <link rel="stylesheet" href="./libs/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mb-4 text-center">Система Управління Бібліотекою</h1>
+
+    <div class="d-flex justify-content-center mb-4">
+        <button class="btn btn-danger" id="clearStorageBtn">Очистити Local Storage</button>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-md-5">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4>Додати Книгу</h4>
+                </div>
+                <div class="card-body">
+                    <form id="addBookForm" novalidate>
+                        <div class="mb-3">
+                            <label for="bookTitle" class="form-label">Назва книги</label>
+                            <input type="text" class="form-control" id="bookTitle" name="title" required>
+                            <div class="invalid-feedback" id="titleError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookAuthor" class="form-label">Автор</label>
+                            <input type="text" class="form-control" id="bookAuthor" name="author" required>
+                            <div class="invalid-feedback" id="authorError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookYear" class="form-label">Рік видання</label>
+                            <input type="text" class="form-control" id="bookYear" name="year" required>
+                            <div class="invalid-feedback" id="yearError"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Додати Книгу</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4>Додати Користувача</h4>
+                </div>
+                <div class="card-body">
+                    <form id="addUserForm" novalidate>
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Ім'я</label>
+                            <input type="text" class="form-control" id="userName" name="name" required>
+                            <div class="invalid-feedback" id="nameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userEmail" name="email" required>
+                            <div class="invalid-feedback" id="emailError"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Додати Користувача</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4>Список Книг</h4>
+                </div>
+                <ul class="list-group list-group-flush" id="bookList">
+                </ul>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4>Список Користувачів</h4>
+                </div>
+                <ul class="list-group list-group-flush" id="userList">
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-container"></div>
+<div class="toast-container position-fixed top-0 end-0 p-3"></div>
+
+<script src="bundle.js"></script>
+</body>
+</html>
