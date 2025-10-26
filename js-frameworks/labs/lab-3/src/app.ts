@@ -21,16 +21,26 @@ class App {
         this.bookStorage = new StorageService<IBook>('books');
         this.userStorage = new StorageService<IUser>('users');
 
-        const books = this.bookStorage.load().map(b => Object.assign(new Book(b.title, b.author, b.year), b));
-        const users = this.userStorage.load().map(u => Object.assign(new User(u.name, u.email), u));
+        const books = this.bookStorage
+            .load()
+            .map((b) => Object.assign(new Book(b.title, b.author, b.year), b));
+        const users = this.userStorage
+            .load()
+            .map((u) => Object.assign(new User(u.name, u.email), u));
 
         this.libraryManager = new LibraryManager(books, users);
 
-        this.bookForm = document.getElementById('addBookForm') as HTMLFormElement;
-        this.userForm = document.getElementById('addUserForm') as HTMLFormElement;
+        this.bookForm = document.getElementById(
+            'addBookForm'
+        ) as HTMLFormElement;
+        this.userForm = document.getElementById(
+            'addUserForm'
+        ) as HTMLFormElement;
         this.bookList = document.getElementById('bookList') as HTMLElement;
         this.userList = document.getElementById('userList') as HTMLElement;
-        this.clearStorageButton = document.getElementById('clearStorageBtn') as HTMLButtonElement;
+        this.clearStorageButton = document.getElementById(
+            'clearStorageBtn'
+        ) as HTMLButtonElement;
 
         this.init();
     }
@@ -38,16 +48,23 @@ class App {
     private init(): void {
         this.bookForm.addEventListener('submit', this.handleAddBook.bind(this));
         this.userForm.addEventListener('submit', this.handleAddUser.bind(this));
-        this.clearStorageButton.addEventListener('click', this.handleClearStorage.bind(this));
+        this.clearStorageButton.addEventListener(
+            'click',
+            this.handleClearStorage.bind(this)
+        );
 
-        this.bookList.addEventListener('click', this.handleBookListClick.bind(this));
-        this.userList.addEventListener('click', this.handleUserListClick.bind(this));
-
+        this.bookList.addEventListener(
+            'click',
+            this.handleBookListClick.bind(this)
+        );
+        this.userList.addEventListener(
+            'click',
+            this.handleUserListClick.bind(this)
+        );
 
         this.renderBooks();
         this.renderUsers();
     }
-
 
     private handleAddBook(e: Event): void {
         e.preventDefault();
@@ -63,7 +80,7 @@ class App {
         const validationConfig: Validator.ValidationConfig = {
             title: { required: true },
             author: { required: true },
-            year: { required: true, isYear: true }
+            year: { required: true, isYear: true },
         };
 
         const validationResult = Validator.validate(data, validationConfig);
@@ -73,7 +90,11 @@ class App {
             return;
         }
 
-        const newBook = new Book(data.title, data.author, parseInt(data.year, 10));
+        const newBook = new Book(
+            data.title,
+            data.author,
+            parseInt(data.year, 10)
+        );
         this.libraryManager.addBook(newBook);
         this.saveAll();
 
@@ -94,7 +115,7 @@ class App {
 
         const validationConfig: Validator.ValidationConfig = {
             name: { required: true },
-            email: { required: true, isEmail: true }
+            email: { required: true, isEmail: true },
         };
 
         const validationResult = Validator.validate(data, validationConfig);
@@ -108,7 +129,10 @@ class App {
         this.libraryManager.addUser(newUser);
         this.saveAll();
 
-        this.notificationService.showToast('Користувача успішно додано!', 'success');
+        this.notificationService.showToast(
+            'Користувача успішно додано!',
+            'success'
+        );
         this.userForm.reset();
         this.renderUsers();
     }
@@ -191,33 +215,38 @@ class App {
         this.renderBooks();
         this.renderUsers();
 
-        this.notificationService.showToast('Local Storage успішно очищено!', 'warning');
+        this.notificationService.showToast(
+            'Local Storage успішно очищено!',
+            'warning'
+        );
     }
-
 
     private renderBooks(): void {
         this.bookList.innerHTML = '';
         const books = this.libraryManager.getBooks();
 
         if (books.length === 0) {
-            this.bookList.innerHTML = '<li class="list-group-item d-flex justify-content-between align-items-center">Книг поки немає.</li>';
+            this.bookList.innerHTML =
+                '<li class="list-group-item d-flex justify-content-between align-items-center">Книг поки немає.</li>';
             return;
         }
 
-        books.forEach(book => {
+        books.forEach((book) => {
             const isBorrowed = !!book.borrowedBy;
             const li = document.createElement('li');
-            li.className = 'list-group-item d-flex justify-content-between align-items-center';
+            li.className =
+                'list-group-item d-flex justify-content-between align-items-center';
             li.innerHTML = `
         <span>
           ${book.getFullInfo()}
           ${isBorrowed ? `<br><small class="text-warning">Позичено (ID: ${book.borrowedBy})</small>` : ''}
         </span>
         <div class="btn-group">
-          ${isBorrowed
-                ? `<button class="btn btn-warning btn-sm" data-action="return" data-id="${book.id}">Повернути</button>`
-                : `<button class="btn btn-success btn-sm" data-action="borrow" data-id="${book.id}">Позичити</button>`
-            }
+          ${
+              isBorrowed
+                  ? `<button class="btn btn-warning btn-sm" data-action="return" data-id="${book.id}">Повернути</button>`
+                  : `<button class="btn btn-success btn-sm" data-action="borrow" data-id="${book.id}">Позичити</button>`
+          }
           <button class="btn btn-danger btn-sm" data-action="delete" data-id="${book.id}">Видалити</button>
         </div>
       `;
@@ -230,13 +259,15 @@ class App {
         const users = this.libraryManager.getUsers();
 
         if (users.length === 0) {
-            this.userList.innerHTML = '<li class="list-group-item d-flex justify-content-between align-items-center">Користувачів поки немає.</li>';
+            this.userList.innerHTML =
+                '<li class="list-group-item d-flex justify-content-between align-items-center">Користувачів поки немає.</li>';
             return;
         }
 
-        users.forEach(user => {
+        users.forEach((user) => {
             const li = document.createElement('li');
-            li.className = 'list-group-item d-flex justify-content-between align-items-center';
+            li.className =
+                'list-group-item d-flex justify-content-between align-items-center';
             li.innerHTML = `
         <span>
           ${user.getFullInfo()}
@@ -248,15 +279,19 @@ class App {
         });
     }
 
-
     private saveAll(): void {
         this.bookStorage.save(this.libraryManager.getBooks());
         this.userStorage.save(this.libraryManager.getUsers());
     }
 
-    private showFormErrors(form: HTMLFormElement, errors: Validator.FormErrors): void {
+    private showFormErrors(
+        form: HTMLFormElement,
+        errors: Validator.FormErrors
+    ): void {
         for (const key in errors) {
-            const input = form.querySelector(`[name="${key}"]`) as HTMLInputElement;
+            const input = form.querySelector(
+                `[name="${key}"]`
+            ) as HTMLInputElement;
             const errorDiv = form.querySelector(`#${key}Error`) as HTMLElement;
 
             if (input) input.classList.add('is-invalid');
@@ -265,8 +300,12 @@ class App {
     }
 
     private clearFormErrors(form: HTMLFormElement): void {
-        form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
-        form.querySelectorAll('.invalid-feedback').forEach(el => el.textContent = '');
+        form.querySelectorAll('.is-invalid').forEach((el) =>
+            el.classList.remove('is-invalid')
+        );
+        form.querySelectorAll('.invalid-feedback').forEach(
+            (el) => (el.textContent = '')
+        );
     }
 }
 

@@ -9,7 +9,7 @@ export class StorageService<T> {
         try {
             localStorage.setItem(this.storageKey, JSON.stringify(data));
         } catch (e) {
-            console.error("Error saving to localStorage", e);
+            console.error('Error saving to localStorage', e);
         }
     }
 
@@ -18,7 +18,7 @@ export class StorageService<T> {
             const data = localStorage.getItem(this.storageKey);
             return data ? JSON.parse(data) : [];
         } catch (e) {
-            console.error("Error loading from localStorage", e);
+            console.error('Error loading from localStorage', e);
             return [];
         }
     }

@@ -7,7 +7,10 @@ export class NotificationService {
         this.modalContainer = document.getElementById('modal-container')!;
     }
 
-    showToast(message: string, type: 'success' | 'warning' | 'danger' = 'success'): void {
+    showToast(
+        message: string,
+        type: 'success' | 'warning' | 'danger' = 'success'
+    ): void {
         const toastId = `toast-${Date.now()}`;
         const toastHTML = `
       <div id="${toastId}" class="toast align-items-center text-bg-${type} border-0" role="alert" aria-live="assertive" aria-atomic="true">
@@ -54,14 +57,21 @@ export class NotificationService {
 
         const closeModal = () => modal.remove();
 
-        document.getElementById('modalCloseX')?.addEventListener('click', closeModal);
-        document.getElementById('modalCancel')?.addEventListener('click', closeModal);
+        document
+            .getElementById('modalCloseX')
+            ?.addEventListener('click', closeModal);
+        document
+            .getElementById('modalCancel')
+            ?.addEventListener('click', closeModal);
 
         document.getElementById('modalSave')?.addEventListener('click', () => {
-            const userId = (document.getElementById('modalUserId') as HTMLInputElement).value;
+            const userId = (
+                document.getElementById('modalUserId') as HTMLInputElement
+            ).value;
 
             if (!userId.trim() || !/^\d+$/.test(userId)) {
-                modalError.textContent = 'ID користувача має складатися лише з цифр і не бути порожнім.';
+                modalError.textContent =
+                    'ID користувача має складатися лише з цифр і не бути порожнім.';
                 modalError.style.display = 'block';
                 return;
             }
@@ -91,8 +101,10 @@ export class NotificationService {
       </div>
     `;
 
-        document.getElementById('modalInfoClose')?.addEventListener('click', () => {
-            this.modalContainer.innerHTML = '';
-        });
+        document
+            .getElementById('modalInfoClose')
+            ?.addEventListener('click', () => {
+                this.modalContainer.innerHTML = '';
+            });
     }
 }

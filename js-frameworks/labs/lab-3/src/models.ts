@@ -12,7 +12,11 @@ export class Book implements IBook {
     id: string;
     borrowedBy: string | null = null;
 
-    constructor(public title: string, public author: string, public year: number) {
+    constructor(
+        public title: string,
+        public author: string,
+        public year: number
+    ) {
         this.id = `book_${new Date().getTime()}`;
     }
 
@@ -34,7 +38,10 @@ export class User implements IUser {
     id: string;
     borrowedBooks: number = 0;
 
-    constructor(public name: string, public email: string) {
+    constructor(
+        public name: string,
+        public email: string
+    ) {
         this.id = `${Math.floor(Math.random() * 9000000000) + 1000000000}`;
     }
 
