@@ -2,7 +2,7 @@ import './../libs/bootstrap.css';
 import { Book, IBook, User, IUser } from './models';
 import { StorageService, NotificationService } from './services';
 import { LibraryManager } from './library';
-import { Validator } from './validation';
+import * as Validator from './validation';
 
 class App {
     private libraryManager: LibraryManager;
