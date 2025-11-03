@@ -43,8 +43,6 @@ export class LibraryManager {
     ): { success: boolean; message: string; book?: IBook; user?: IUser } {
         const book = this.bookLibrary.find(bookId);
         if (!book) return { success: false, message: 'Книгу не знайдено.' };
-        if (book.borrowedBy)
-            return { success: false, message: 'Книга вже позичена.' };
 
         const user = this.userLibrary.find(userId);
         if (!user)
@@ -56,6 +54,9 @@ export class LibraryManager {
                 message: `Користувач ${user.name} вже має 3 книги. Неможливо позичити більше.`,
             };
         }
+
+        if (book.borrowedBy)
+            return { success: false, message: 'Книга вже позичена.' };
 
         book.borrowedBy = user.id;
         user.borrowedBooks += 1;

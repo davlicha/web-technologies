@@ -1,0 +1,10 @@
+{
+  "require": "ts-node/register",
+  "extensions": ["ts"],
+  "spec": "dist/test/**/*.test.js",
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}

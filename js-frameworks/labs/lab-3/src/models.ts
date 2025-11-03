@@ -17,7 +17,7 @@ export class Book implements IBook {
         public author: string,
         public year: number
     ) {
-        this.id = `book_${new Date().getTime()}`;
+        this.id = `book_${new Date().getTime() + Math.floor(Math.random() * 1000000000)}`;
     }
 
     getFullInfo(): string {
