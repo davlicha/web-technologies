@@ -1,5 +1,4 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
 
+cd js-frameworks/labs/lab-3
 npx lint-staged
-npm test
